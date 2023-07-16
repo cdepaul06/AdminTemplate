@@ -4,7 +4,7 @@ import { dashboardCards } from "../../constants";
 
 const Dashboard = ({}) => {
   return (
-    <div className='flex flex-wrap justify-evenly m-5 ml-[10%]'>
+    <div className='flex flex-wrap justify-evenly m-10 ml-[13%]'>
       {dashboardCards.map((card) => (
         <div key={card.id} className='m-2'>
           <DashboardCard
