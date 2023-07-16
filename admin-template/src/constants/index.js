@@ -1,8 +1,9 @@
 import {
   HomeIcon,
-  UserIcon,
+  UsersIcon,
   ShoppingCartIcon,
   CogIcon,
+  CurrencyDollarIcon,
 } from "@heroicons/react/24/solid";
 
 const navLinks = [
@@ -17,7 +18,7 @@ const navLinks = [
     id: "users",
     title: "Users",
     path: "/userAccounts",
-    icon: UserIcon,
+    icon: UsersIcon,
     exact: true,
   },
   {
@@ -36,4 +37,31 @@ const navLinks = [
   },
 ];
 
-export { navLinks };
+const dashboardCards = [
+  {
+    id: "totalUsers",
+    title: "Total Users",
+    value: 69,
+    icon: UsersIcon,
+  },
+  {
+    id: "totalProducts",
+    title: "Total Products",
+    value: 602,
+    icon: ShoppingCartIcon,
+  },
+  {
+    id: "totalOrders",
+    title: "Total Orders",
+    value: 404,
+    icon: ShoppingCartIcon,
+  },
+  {
+    id: "totalRevenue",
+    title: "Total Revenue",
+    value: "10,000",
+    icon: CurrencyDollarIcon,
+  },
+];
+
+export { navLinks, dashboardCards };
