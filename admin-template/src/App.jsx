@@ -3,7 +3,9 @@ import "./App.css";
 const App = ({}) => {
   return (
     <>
-      <header>Admin Template</header>
+      <div>
+        <header className='font-bold'>Admin Template</header>
+      </div>
     </>
   );
 };
