@@ -16,7 +16,7 @@ const navLinks = [
   {
     id: "users",
     title: "Users",
-    path: "/users",
+    path: "/userAccounts",
     icon: UserIcon,
     exact: true,
   },
