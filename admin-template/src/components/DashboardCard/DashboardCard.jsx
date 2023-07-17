@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const DashboardCard = ({ title, value, icon }) => {
+const DashboardCard = ({ title, amount, icon }) => {
   const IconComponent = icon;
 
   // State to hold box shadow
@@ -10,10 +10,10 @@ const DashboardCard = ({ title, value, icon }) => {
   useEffect(() => {
     setBoxShadow("0 0 10px 3px limegreen");
 
-    // After 300ms, remove the box shadow
+    // After 500ms, remove the box shadow
     const timeoutId = setTimeout(() => setBoxShadow(""), 500);
     return () => clearTimeout(timeoutId);
-  }, [value]);
+  }, [amount]);
 
   return (
     <div
@@ -27,7 +27,7 @@ const DashboardCard = ({ title, value, icon }) => {
         <IconComponent className='w-10 h-10 text-white ml-2' />
         <div className='ml-5'>
           <p className='text-white text-lg font-semibold underline'>{title}</p>
-          <p className='text-white text-2xl font-semibold'>{value}</p>
+          <p className='text-white text-2xl font-semibold'>{amount}</p>
         </div>
       </div>
     </div>

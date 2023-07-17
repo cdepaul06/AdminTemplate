@@ -1,8 +1,9 @@
 import React from "react";
 import DashboardCard from "../DashboardCard";
 import { useDashboardCards } from "../../constants";
+import DynamicBarChart from "../DynamicBarChart";
 
-const Dashboard = ({ title, value, icon }) => {
+const Dashboard = () => {
   const cards = useDashboardCards();
 
   return (
@@ -12,11 +13,14 @@ const Dashboard = ({ title, value, icon }) => {
           <div key={card.id} className='m-2'>
             <DashboardCard
               title={card.title}
-              value={card.value}
+              amount={card.amount}
               icon={card.icon}
             />
           </div>
         ))}
+      </div>
+      <div className='ml-[35%] mt-[5%]'>
+        <DynamicBarChart data={cards} />
       </div>
     </>
   );

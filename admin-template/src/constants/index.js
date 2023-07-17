@@ -31,6 +31,13 @@ const navLinks = [
     exact: true,
   },
   {
+    id: "revenue",
+    title: "Revenue",
+    path: "/revenue",
+    icon: CurrencyDollarIcon,
+    exact: true,
+  },
+  {
     id: "settings",
     title: "Settings",
     path: "/settings",
@@ -43,25 +50,25 @@ const dashboardCards = [
   {
     id: "totalUsers",
     title: "Total Users",
-    value: 69,
+    amount: 69,
     icon: UsersIcon,
   },
   {
     id: "totalProducts",
     title: "Total Products",
-    value: 602,
+    amount: 602,
     icon: ShoppingCartIcon,
   },
   {
     id: "totalOrders",
     title: "Total Orders",
-    value: 404,
+    amount: 404,
     icon: ShoppingCartIcon,
   },
   {
     id: "totalRevenue",
     title: "Total Revenue",
-    value: "10,000",
+    amount: "10,000",
     icon: CurrencyDollarIcon,
   },
 ];
@@ -70,25 +77,25 @@ const initialDashboardCards = [
   {
     id: "totalUsers",
     title: "Total Users",
-    value: 69,
+    amount: 69,
     icon: UsersIcon,
   },
   {
     id: "totalProducts",
     title: "Total Products",
-    value: 602,
+    amount: 602,
     icon: ShoppingCartIcon,
   },
   {
     id: "totalOrders",
     title: "Total Orders",
-    value: 404,
+    amount: 404,
     icon: ShoppingCartIcon,
   },
   {
     id: "totalRevenue",
     title: "Total Revenue",
-    value: "10,000",
+    amount: "10,000",
     icon: CurrencyDollarIcon,
   },
 ];
@@ -100,11 +107,11 @@ const useDashboardCards = () => {
     const intervalId = setInterval(() => {
       setDashboardCards((prevCards) => {
         return prevCards.map((card) => {
-          const newValue =
+          const newamount =
             card.id === "totalRevenue"
               ? Math.floor(Math.random() * 100000)
               : Math.floor(Math.random() * 1000);
-          return { ...card, value: newValue };
+          return { ...card, amount: newamount };
         });
       });
     }, 5000);
