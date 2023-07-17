@@ -10,6 +10,7 @@ const App = ({}) => {
         <Route path='/' element={<Dashboard />} />
         <Route path='/userAccounts' />
         <Route path='/products' />
+        <Route path='/revenue' />
         <Route path='/settings' />
       </Routes>
       <Navigation />

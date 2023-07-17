@@ -21,55 +21,24 @@ const navLinks = [
     title: "Users",
     path: "/userAccounts",
     icon: UsersIcon,
-    exact: true,
   },
   {
     id: "products",
     title: "Products",
     path: "/products",
     icon: ShoppingCartIcon,
-    exact: true,
   },
   {
     id: "revenue",
     title: "Revenue",
     path: "/revenue",
     icon: CurrencyDollarIcon,
-    exact: true,
   },
   {
     id: "settings",
     title: "Settings",
     path: "/settings",
     icon: CogIcon,
-    exact: true,
-  },
-];
-
-const dashboardCards = [
-  {
-    id: "totalUsers",
-    title: "Total Users",
-    amount: 69,
-    icon: UsersIcon,
-  },
-  {
-    id: "totalProducts",
-    title: "Total Products",
-    amount: 602,
-    icon: ShoppingCartIcon,
-  },
-  {
-    id: "totalOrders",
-    title: "Total Orders",
-    amount: 404,
-    icon: ShoppingCartIcon,
-  },
-  {
-    id: "totalRevenue",
-    title: "Total Revenue",
-    amount: "10,000",
-    icon: CurrencyDollarIcon,
   },
 ];
 
@@ -100,6 +69,7 @@ const initialDashboardCards = [
   },
 ];
 
+// ! This is to simulate data changes on the dashboard view, can be adjusted to use Redux or Context API
 const useDashboardCards = () => {
   const [dashboardCards, setDashboardCards] = useState(initialDashboardCards);
 
@@ -117,7 +87,7 @@ const useDashboardCards = () => {
     }, 5000);
 
     return () => clearInterval(intervalId);
-  }, []); // Empty dependencies array to only run once
+  }, []);
 
   return dashboardCards;
 };
