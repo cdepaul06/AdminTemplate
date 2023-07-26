@@ -84,7 +84,7 @@ const useDashboardCards = () => {
           return { ...card, amount: newamount };
         });
       });
-    }, 5000);
+    }, 10000);
 
     return () => clearInterval(intervalId);
   }, []);

@@ -9,13 +9,13 @@ const Navigation = ({}) => {
         {navLinks.map((link) => {
           const IconComponent = link.icon;
           return (
-            <li key={link.path} className='py-1 w-[91%] ml-3'>
-              <button
-                className='bg-[#024362] border hover:bg-green-300 text-white font-bold py-2 px-4 rounded w-full transition duration-1000 hover:text-black'
-                style={{ display: "flex", alignItems: "center" }}
-              >
-                <Link
-                  to={link.path}
+            <Link
+              to={link.path}
+              style={{ display: "flex", alignItems: "center" }}
+            >
+              <li key={link.path} className='py-1 w-[91%] ml-3'>
+                <button
+                  className='bg-[#024362] border hover:bg-green-300 text-white font-bold py-2 px-4 rounded w-full transition duration-1000 hover:text-black'
                   style={{ display: "flex", alignItems: "center" }}
                 >
                   <IconComponent className='mr-2 w-7 h-7' />
@@ -28,9 +28,9 @@ const Navigation = ({}) => {
                   >
                     <span>{link.title}</span>
                   </div>
-                </Link>
-              </button>
-            </li>
+                </button>
+              </li>
+            </Link>
           );
         })}
       </ul>

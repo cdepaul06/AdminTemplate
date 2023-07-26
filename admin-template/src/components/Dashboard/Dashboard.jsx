@@ -8,7 +8,7 @@ const Dashboard = () => {
 
   return (
     <>
-      <div className='flex flex-wrap justify-evenly m-10 ml-[13%]'>
+      <div className='flex flex-wrap justify-evenly mx-auto mt-10 ml-[13%]'>
         {cards.map((card) => (
           <div key={card.id} className='m-2'>
             <DashboardCard
