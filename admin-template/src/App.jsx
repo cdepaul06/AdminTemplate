@@ -7,24 +7,18 @@ import Users from "./components/Users";
 const App = ({}) => {
   return (
     <Router>
-      <Routes>
-        <>
-          <Route path='/' element={<Dashboard />} />
-        </>
-        <>
-          <Route path='/users' element={<Users />} />
-        </>
-        <>
-          <Route path='/products' />
-        </>
-        <>
-          <Route path='/revenue' />
-        </>
-        <>
-          <Route path='/settings' />
-        </>
-      </Routes>
-      <Navigation />
+      <div className='flex h-screen'>
+        <Navigation />
+        <div className='flex-grow overflow-auto'>
+          <Routes>
+            <Route path='/' element={<Dashboard />} />
+            <Route path='/users' element={<Users />} />
+            <Route path='/products' />
+            <Route path='/revenue' />
+            <Route path='/settings' />
+          </Routes>
+        </div>
+      </div>
     </Router>
   );
 };

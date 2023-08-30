@@ -5,7 +5,7 @@ import { navLinks } from "../../constants";
 const Navigation = ({}) => {
   return (
     <nav className='fixed top-0 left-0 h-screen w-64 bg-[#066693] border-r 2 overflow-auto'>
-      <ul className='list-none p-0 m-0'>
+      <ul className='list-none p-0 m-0 mt-2'>
         {navLinks.map((link) => {
           const IconComponent = link.icon;
           return (
