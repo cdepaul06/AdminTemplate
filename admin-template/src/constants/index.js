@@ -19,7 +19,7 @@ const navLinks = [
   {
     id: "users",
     title: "Users",
-    path: "/userAccounts",
+    path: "/users",
     icon: UsersIcon,
   },
   {

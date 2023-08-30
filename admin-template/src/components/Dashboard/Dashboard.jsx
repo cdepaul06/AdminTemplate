@@ -8,7 +8,7 @@ const Dashboard = () => {
 
   return (
     <>
-      <div className='flex flex-wrap justify-evenly mt-10'>
+      <div className='flex flex-wrap justify-evenly mt-10 ml-64'>
         {cards.map((card) => (
           <div key={card.id} className='m-2'>
             <DashboardCard
@@ -19,7 +19,7 @@ const Dashboard = () => {
           </div>
         ))}
       </div>
-      <div className='flex flex-row mt-[5%]'>
+      <div className='flex flex-row mt-[5%] ml-[32%]'>
         <DynamicBarChart data={cards} />
       </div>
     </>

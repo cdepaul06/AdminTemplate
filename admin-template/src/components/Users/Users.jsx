@@ -2,7 +2,7 @@ import React from "react";
 
 const Users = ({}) => {
   return (
-    <div>
+    <div className='ml-64'>
       <h1>Users</h1>
     </div>
   );
